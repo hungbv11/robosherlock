@@ -121,7 +121,7 @@ public:
     rs::SceneCas cas(tcas);
 
     cas.get(VIEW_CLOUD, *cloud);
-    cas.get(VIEW_COLOR_IMAGE_HD, color);
+    cas.get(VIEW_COLOR_IMAGE, color);
 
     rs::Scene scene = cas.getScene();
 
@@ -135,10 +135,10 @@ public:
         continue;
       }
       cv::Rect roi;
-      rs::conversion::from(cluster.rois().roi_hires(), roi);
-
+      rs::conversion::from(cluster.rois().roi(), roi);
+      outInfo("");
       const cv::Mat &clusterImg = color(roi);
-
+      outInfo("");
       std::vector<float> result = caffeProxyObj->extractFeature(clusterImg);
       cv::Mat desc(1, result.size(), CV_32F, &result[0]);
 
