@@ -58,6 +58,6 @@
 #define VIEW_SEMANTIC_MAP        "semantic_map"
 #define VIEW_SCENE               "scene"
 
-#define VIEW_CLUSTER_IMAGE        "color_image"
+#define VIEW_CLASIFIED_IMAGE        "color_image"
 
 #endif /* VIEW_NAMES_H_ */
