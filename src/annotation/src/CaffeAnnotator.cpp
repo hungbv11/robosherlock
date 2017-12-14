@@ -121,7 +121,7 @@ public:
     rs::SceneCas cas(tcas);
 
     cas.get(VIEW_CLOUD, *cloud);
-    cas.get(VIEW_COLOR_IMAGE, color);
+    cas.get(VIEW_CLASIFIED_IMAGE, color);
 
     rs::Scene scene = cas.getScene();
 
