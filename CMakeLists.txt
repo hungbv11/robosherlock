@@ -51,7 +51,8 @@ find_package(catkin REQUIRED
  COMPONENTS
  roscpp roslib pcl_ros pcl_conversions pcl_msgs
  tf tf_conversions rostime sensor_msgs std_msgs
- cv_bridge image_transport image_geometry message_filters)
+ visualization_msgs cv_bridge image_transport
+ image_geometry message_filters resource_retriever)
 
 
 find_package(Eigen3 QUIET)
@@ -67,7 +68,7 @@ endif()
 
 
 find_package(OpenCV REQUIRED)
-find_package(PCL REQUIRED)
+find_package(PCL 1.8 REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system thread date_time python)
 
 find_package(APR REQUIRED)
